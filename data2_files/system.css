@@ -1,0 +1,872 @@
+﻿.go
+{
+	width: 100%;	
+}
+.go a
+{
+	float: right;
+}
+	
+.annotation
+{
+	font-weight: bold;
+	color: Blue;
+	text-align: justify;
+}
+	
+
+.bus
+{
+	padding: 2px 4px 2px 4px;
+	border: 1px solid black;
+	cursor: pointer;
+	color: black;
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+}
+
+.busselect
+{
+	padding: 2px 4px 2px 4px;
+	border: 1px solid black;
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+	background-color: Blue;
+	color: White;
+}
+
+
+.content1
+{
+	width: 26%;	
+	/*width: 368px;	*/
+}
+
+.content1 .nav
+{
+	border: 1px solid #a1c1dc;
+    margin: 3px 3px 3px 0px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+	font-weight: bold;
+}
+
+.content1 .shiftedBlueHeader
+{
+	background: transparent url(aa.png) no-repeat;
+	color: white;
+	font-family: "Trebuchet MS", Arial, Verdana, Lucida Grande, Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    height: 29px;
+    left: -1px;
+    position: relative;
+    text-align: left;
+    padding-left: 8px;
+    top: -1px;
+    width: 200px;
+    }
+
+.content1 .shiftedBlueHeader a,.content1 .shiftedBlueHeader a:visited,.content1 .shiftedBlueHeader a:link
+{
+	color: white;
+}
+/*
+.content1 .level3 a, .content1 .level3 span
+{
+	background: transparent url(submenu-bg.png) no-repeat 0px 5px;
+	padding-left: 6px;
+	display: inline-block;
+}
+
+.content1 .level4 a, .content1 .level4 span
+{
+	background: transparent url(submenu-bg1.png) no-repeat 0px 5px;
+	padding-left: 6px;
+	display: inline-block;
+}*/
+
+
+.content2
+{
+	width: 76%;
+}
+
+.content2 h1
+{
+	color: #015cad;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-top: 4px;
+}
+
+.content2 .txt
+{
+    padding-left: 10px;
+}
+.sw1, .sw2
+{
+	background: url(left-block-header-bg.png) no-repeat;
+	border: none;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 10px;
+	width: 131px;
+	height: 20px;
+	text-align: center;
+	padding-top: 6px;
+	display: inline-block; 
+	color: White;
+}
+
+.sw2
+{
+	background: url(billboard-bg.png) no-repeat;
+	cursor: pointer;
+}
+
+/************************************************/
+/*				Навигация						*/
+/************************************************/
+.locationBar a, .locationBar a:visited, .locationBar a:link
+{
+	color: Blue;
+	min-height: 16px;
+}
+.locationBar a
+{
+	display: block;
+	background: transparent url(arrow-up.png) no-repeat 0px 0px;
+	padding-left: 18px;
+	min-height: 26px;
+}
+
+.locationBar span
+{
+	display: block;
+	background: transparent url(tick-green.png) no-repeat 0px 0px;
+	padding-left: 18px;
+	min-height: 16px;
+}
+
+.locationBarSub
+{
+	margin-left: 16px;
+}
+.locationBarSub a
+{
+	display: block;
+	background: transparent url(arrow-right.png) no-repeat 4px 4px;
+	padding-left: 12px;
+	min-height: 16px;
+}
+
+
+.header .top_block .GO {
+	height:140px;
+	width:575px;
+	float:left;
+	cursor: pointer;
+}
+
+td
+{
+	vertical-align: top;
+}
+
+
+/************************************************/
+/*			Поиск и добавление					*/
+/************************************************/
+
+.search_form input[type="text"]{
+	border: 1px solid #c8d2e0;
+    float: left;
+    height: 18px;
+    width: 240px;
+}
+
+.search_form_dt input[type="text"]{
+	border: 1px solid #c8d2e0;
+    height: 18px;
+    width: 80px;
+}
+
+
+.search_form textarea {
+	border: 1px solid #c8d2e0;
+    float: left;
+    width: 240px;
+}
+
+.search_form select{
+	border: 1px solid #c8d2e0;
+    float: left;
+    height: 18px;
+    width: 240px;
+}
+
+.message_form textarea {
+	border: 1px solid #c8d2e0;
+    float: left;
+    width: 350px;
+}
+.message_form select, .message_form input[type="text"], .message_form input[type="password"]
+{
+	border: 1px solid #c8d2e0;
+    float: left;
+    height: 18px;
+    width: 350px;
+}
+
+.message_form .sm
+{
+	border: 1px solid #c8d2e0;
+    height: 18px;
+    width: auto;
+}
+
+.message_form input[type="password"]
+{
+    width: 100px;
+    float: none;
+}
+
+.message_form .button, .message_form input[type="submit"], .search_form input[type="submit"]
+{
+	background: url(button-120x23.png) no-repeat;
+	border: none;
+    color: #0f3267;
+    font-family: Tahoma;
+    font-size: 10px;
+    font-weight: bold;
+    height: 23px;
+    padding-top: 2px;
+    padding-left: 4px;
+	width: 120px;
+	margin-top: 8px;
+}
+
+.message_form #Pin_check_ER, .message_form #Pin1201, .message_form #RegisterPin
+{
+	width: 100px;
+}
+
+
+
+/************************************************/
+/*			Abbreviation						*/
+/************************************************/
+.abr
+{
+	border-bottom: 1px  dashed red;	
+	cursor: help;
+}
+
+.abr span
+{
+	display: none;
+	background-color: yellow;
+	margin-left: 4px; 
+	border: 1px solid black;	
+	width: 180px;
+	padding: 2px;
+	text-align: left;
+	text-indent: 0px;
+	font-weight: normal;
+}
+
+
+.abr:hover span
+{
+    display: inline;
+	position: absolute;
+}
+
+/************************************************/
+/*					Calendar					*/
+/************************************************/
+.MyCalendar .ajax__calendar_container {
+    border:1px solid #646464;
+    background-color: lemonchiffon;
+    color: red;
+}
+.MyCalendar .ajax__calendar_other .ajax__calendar_day,
+.MyCalendar .ajax__calendar_other .ajax__calendar_year {
+    color: black;
+}
+.MyCalendar .ajax__calendar_hover .ajax__calendar_day,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_month,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_year {
+    color: black;
+}
+.MyCalendar .ajax__calendar_active .ajax__calendar_day,
+.MyCalendar .ajax__calendar_active .ajax__calendar_month,
+.MyCalendar .ajax__calendar_active .ajax__calendar_year {
+    color: black;
+    font-weight:bold;
+}
+
+
+/************************************************/
+/*			Foto gallary	список				*/
+/************************************************/
+.fotolist
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.fotolist li
+{
+	display: block;
+	list-style:none;
+	background:url("photo.png") no-repeat;
+	padding-left: 40px;
+	cursor:  pointer;
+	min-height: 32px;
+}
+.fotolist li span:hover
+{
+	text-decoration: underline;
+}
+#fotoInfo
+{
+	color: blue;
+	text-align: center;
+	margin-bottom: 20px;
+}	
+
+/************************************************/
+/*			Foto gallary						*/
+/************************************************/
+.foto .list{
+	max-width: 850px;
+	height: 94px;
+	overflow-x: scroll;
+}
+
+.foto img
+{
+	border: 4px solid white;	
+}
+
+#fotoInfo
+{
+	font-weight: bold;
+}
+
+#fotoRes
+{
+	max-width: 600px;
+}
+
+/************************************************/
+/*			video								*/
+/************************************************/
+
+.videopreview
+{
+	width: 140px;
+}
+.videolist span:hover
+{
+	text-decoration: underline;
+}
+.videolist span
+{
+	cursor: hand;
+}
+
+
+.videolist img
+{
+	margin-left: 10px;
+	margin-right: 2px;
+	vertical-align: middle;
+}
+
+.videolist .VideoLoad a
+{
+	background: url(Download.png) no-repeat;
+	display: block;
+	height: 32px;
+	margin: 4px;
+	padding-left: 32px;
+	color: Blue;
+	vertical-align: middle;
+}
+
+/************************************************/
+/*		списки документов на страницах			*/
+/************************************************/
+
+.listDop img
+{
+	border-width: 0;
+}
+
+.listDop a{
+	display: block;
+	margin-bottom: 4px;
+}
+
+a.doc{
+	display: block;
+	background:url("list-marker-blue.png") no-repeat  0px 3px;
+	padding-left: 14px;
+	min-height: 18px;
+}
+
+span.doc{
+	display: block;
+	background:url("list-marker-blue.png") no-repeat  0px 3px;
+	padding-left: 14px;
+	min-height: 18px;
+	font-weight: bold;
+}
+
+
+a.docA{
+	display: block;
+	background:url("blue-marker-1.png") no-repeat  0px 0px;
+	padding-left: 16px;
+	min-height: 16px;
+}
+
+a.docA:hover
+{
+	text-decoration: underline;
+}
+
+
+span.docA{
+	display: block;
+	background:url("blue-marker-2.png") no-repeat  0px 0px;
+	padding-left: 16px;
+	min-height: 16px;
+	font-weight: bold;
+}
+
+
+a.url{
+	display: block;
+	background:url("bullet_go.png") no-repeat -4px 0px;
+	padding-left: 14px;
+	min-height: 18px;
+}
+
+/************************************************/
+/*		Кнопки									*/
+/************************************************/
+
+.button{
+	background: url(button-140px.png) no-repeat;
+	border: none;
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+    height: 21px;
+    margin-top: 10px;
+	width: 140px;
+	text-align: center;
+	padding-top: 2px;
+	}
+
+.button2{
+	background: url(search.gif) no-repeat;
+    color: #fff;
+	float: left;
+    font-size: 10px;
+    height: 23px;
+    margin-left: 10px;
+    margin-top: -1px;
+    width: 47px;
+}
+
+/************************************************/
+/*		Переходы по страницам					*/
+/************************************************/
+
+.pageNext
+{
+	text-decoration: none;
+	display: inline-block;
+	width: 20px;
+}
+
+.pageNow
+{
+	text-decoration: none;
+	display: inline-block;
+	width: 20px;
+	font-weight: bold;
+}
+
+.pages
+{
+	margin: 4px;
+	
+}
+
+/************************************************/
+/*		Текущий путь							*/
+/************************************************/
+.way{
+	text-align: left;
+	margin-left: 10px;
+	margin-top: 10px
+}
+.way a, .way span
+{
+	color: black;
+	text-decoration: none;	
+	background:url("bullet_blue.png") no-repeat;
+	padding-left: 16px;
+}
+
+.way span
+{
+	font-weight: bold;
+	background:url("bullet_star.png") no-repeat;
+}
+
+.way a:hover
+{
+	text-decoration: underline;	
+	background:url("bullet_red.png") no-repeat;
+}
+
+.way_sub a
+{
+	color: black;
+	text-decoration: none;	
+	background:url("bullet_go.png") no-repeat;
+	padding-left: 16px;
+	display: block;
+}
+
+.way_sub a:hover
+{
+	text-decoration: underline;	
+	background:url("bullet_go.png") no-repeat;
+}
+
+
+
+/*  Разное  */
+.dt
+{
+	color: Green;
+	display: inline-block;
+	margin-right: 8px;
+}
+
+.download
+{
+	display: block;
+	background:url("download.png") no-repeat;
+	padding-left: 40px;
+	text-transform: uppercase;
+	min-height: 34px;
+	padding-top: 10px;
+
+}
+
+
+.print
+{
+	display: block;
+	background:url("print.png") no-repeat;
+	padding-left: 40px;
+	text-transform: uppercase;
+	min-height: 34px;
+	padding-top: 10px;
+	margin-top: 40px;
+}
+
+
+.adm_head
+{
+	width: 150px;
+	text-align: left;
+	font-style: italic;
+}
+
+
+div .content
+{
+	max-height: 600px;
+	overflow: auto;
+	padding-right: 4px;
+}
+
+
+/*  Переход на полный раздел */
+div.all 
+{
+	text-align: right;
+	margin: 2px;
+}
+
+div.all a{
+	background: url(list-marker-blue.png) no-repeat 0px 3px;
+    color: #6189ba;
+    text-decoration: none;
+	padding-left: 8px;
+}
+div.all a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* Результаты голосования */
+.vt th
+{
+	border: 1px solid black;
+	text-align: center;
+	display: inline-block;
+	margin: 1px;
+	width: 20px;
+	height: 14px;
+}
+
+.VoiteYes
+{
+	display: none;
+	color: Red;
+	margin: 4px 0px 8px 0px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.VoiteGo a, .VoiteGo a:visited, .VoiteGo a:link, .VoiteGo a:hover
+{
+	color: #01326e;
+	font-family: "Trebuchet MS", Verdana, Lucida Grande, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	margin:0 0 10px 0;
+    text-decoration: none;
+}
+/* $$$$$Короткое сообщение */
+.shortmessage textarea
+{
+	border: 1px solid #c8d2e0;
+    height: 160px;
+    width: 390px;
+}
+
+.shortmessage div
+{
+	background: url(button-140px.png) no-repeat;
+	color: #6a6867;
+	font-size: 11px;
+    font-weight: bold;
+	padding: 3px 0px 5px 0px;
+	text-align: center;
+	width: 140px;
+	margin-top: 6px;
+	cursor: pointer;
+	margin-left: 126px;
+}
+
+
+
+.ajax_plus
+{
+	background: url(plus.gif) no-repeat 0px 4px;
+	padding: 0px 0px 0px 16px;
+	cursor: pointer;
+	margin-top: 8px;
+}
+
+.ajax_minus
+{
+	background: url(minus.gif) no-repeat 0px 4px;
+	padding: 0px 0px 0px 16px;
+	cursor: auto;
+	margin-top: 8px;
+}
+
+
+.videosmall
+{
+	background: transparent url(small_video.png) no-repeat 0px 0px;
+	display: block;
+	padding-left: 18px;
+	min-height: 18px;
+}
+
+
+.AjaxLink{
+	color: #01549e;
+	cursor: hand;
+	text-decoration: none;
+}
+
+.AjaxLink:hover{
+	text-decoration: underline;
+}
+
+
+/* Фотогалерея*/
+.ph{
+	background-color: #2d73b2;
+    border-bottom: 1px solid #1f347a;
+    border-top: 1px solid #1f347a;
+    margin-top: 20px;
+    width: 600px;
+    margin-left: 60px;
+}
+.ph .title {
+	color: #fff;
+	font-family: "Trebuchet MS", Arial, Verdana, Lucida Grande, Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px 30px;
+}
+.ph .pages
+{
+	float: right;
+}
+
+.ph .res
+{
+	text-align: center;
+}
+.ph .res img
+{
+	max-width:500px;
+}
+.ph .res div
+{
+	color: white;
+}
+	
+.ph .galleryViewer {
+	background: url(gallery-scrollbar-bg.png) repeat-x;
+    height: 69px;
+    padding: 7px 2px 8px 2px;
+    text-align: center;
+}
+/*#photoGalleries .images {
+}
+#photoGalleries .images .galleryImage {
+	display: table-cell;
+    text-align: center;
+    width: 20%;
+}
+#photoGalleries .images .scroller {
+	display: table-cell;
+    vertical-align: middle;
+    width: 22px;
+}
+*/
+
+.border td
+{
+	border: 1px solid #01549e;
+}
+
+
+
+/* авторизация */
+
+.log .button2 {
+	background: url(search-button.png) no-repeat 0px 2px;
+	border: none;
+    color: #fff;
+    font-family: Tahoma;
+    font-size: 9px;
+    height: 23px;
+	width: 42px;
+	float: none;
+}
+.log  input[type="text"],.log  input[type="password"] {
+	border: 1px solid blue;
+    font-size: 11px;
+    width: 100px;
+}
+
+.log
+{
+	margin-left: 18px;
+	border-bottom: 1px solid #a1c1dc;
+}
+
+.log .error
+{
+	display: block;
+	color: Red;
+}
+
+
+
+
+
+
+/* Форум */
+.forum
+{
+	border: 1px solid blue;
+	margin-bottom: 4px;
+}
+
+.forum .title
+{
+	background-color:Blue ;
+	color: White;
+	padding: 4px;
+}
+
+.forum .theard
+{
+	font-weight: bold;
+}
+
+
+.tagline
+{
+border11: 1px solid blue;
+width: 300px;	
+padding: 2px;
+}
+
+.taggroup
+{
+	display: inline-block; margin-right: 10px;
+	
+}
+
+#forum 
+{
+	border: 1px solid blue;
+	padding: 2px;
+	width: 320px;
+
+}
+
+#forum input[type="text"]{
+	border: 1px solid #c8d2e0;
+    width: 300px;
+}
+
+
+#forum textarea {
+	border: 1px solid #c8d2e0;
+	    width: 300px;
+}
+
+.f-field
+{
+	display: inline-block; margin-right: 10px;
+}
+
+.paging
+{
+/*float: right;	*/
+}

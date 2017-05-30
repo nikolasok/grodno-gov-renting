@@ -1,0 +1,66 @@
+var Ajax=function() {
+Ajax.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+Ajax.prototype={
+GetNewPinGraphics:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(Ajax.get_path(), 'GetNewPinGraphics',false,{},succeededCallback,failedCallback,userContext); },
+CheckPinGraphics:function(txt,succeededCallback, failedCallback, userContext) {
+return this._invoke(Ajax.get_path(), 'CheckPinGraphics',false,{txt:txt},succeededCallback,failedCallback,userContext); },
+GetNewPin:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(Ajax.get_path(), 'GetNewPin',false,{},succeededCallback,failedCallback,userContext); },
+CheckPin:function(guid,txt,succeededCallback, failedCallback, userContext) {
+return this._invoke(Ajax.get_path(), 'CheckPin',false,{guid:guid,txt:txt},succeededCallback,failedCallback,userContext); },
+SaveVoite:function(GuidObject,list,succeededCallback, failedCallback, userContext) {
+return this._invoke(Ajax.get_path(), 'SaveVoite',false,{GuidObject:GuidObject,list:list},succeededCallback,failedCallback,userContext); },
+SaveForum:function(GuidControl,GuidClassifier,GuidObject,name,title,text,pin1,pin2,succeededCallback, failedCallback, userContext) {
+return this._invoke(Ajax.get_path(), 'SaveForum',false,{GuidControl:GuidControl,GuidClassifier:GuidClassifier,GuidObject:GuidObject,name:name,title:title,text:text,pin1:pin1,pin2:pin2},succeededCallback,failedCallback,userContext); },
+GetCache:function(NameCache,GuidControl,Param1,Param2,Param3,succeededCallback, failedCallback, userContext) {
+return this._invoke(Ajax.get_path(), 'GetCache',false,{NameCache:NameCache,GuidControl:GuidControl,Param1:Param1,Param2:Param2,Param3:Param3},succeededCallback,failedCallback,userContext); },
+Get:function(GuidControl,Param1,Param2,Param3,succeededCallback, failedCallback, userContext) {
+return this._invoke(Ajax.get_path(), 'Get',false,{GuidControl:GuidControl,Param1:Param1,Param2:Param2,Param3:Param3},succeededCallback,failedCallback,userContext); },
+GetExt:function(GuidControl,Param1,Param2,Param3,succeededCallback, failedCallback, userContext) {
+return this._invoke(Ajax.get_path(), 'GetExt',false,{GuidControl:GuidControl,Param1:Param1,Param2:Param2,Param3:Param3},succeededCallback,failedCallback,userContext); },
+GetPhotoPages:function(GuidControl,guid,Lang,succeededCallback, failedCallback, userContext) {
+return this._invoke(Ajax.get_path(), 'GetPhotoPages',false,{GuidControl:GuidControl,guid:guid,Lang:Lang},succeededCallback,failedCallback,userContext); }}
+Ajax.registerClass('Ajax',Sys.Net.WebServiceProxy);
+Ajax._staticInstance = new Ajax();
+Ajax.set_path = function(value) { 
+var e = Function._validateParams(arguments, [{name: 'path', type: String}]); if (e) throw e; Ajax._staticInstance._path = value; }
+Ajax.get_path = function() { return Ajax._staticInstance._path; }
+Ajax.set_timeout = function(value) { var e = Function._validateParams(arguments, [{name: 'timeout', type: Number}]); if (e) throw e; if (value < 0) { throw Error.argumentOutOfRange('value', value, Sys.Res.invalidTimeout); }
+Ajax._staticInstance._timeout = value; }
+Ajax.get_timeout = function() { 
+return Ajax._staticInstance._timeout; }
+Ajax.set_defaultUserContext = function(value) { 
+Ajax._staticInstance._userContext = value; }
+Ajax.get_defaultUserContext = function() { 
+return Ajax._staticInstance._userContext; }
+Ajax.set_defaultSucceededCallback = function(value) { 
+var e = Function._validateParams(arguments, [{name: 'defaultSucceededCallback', type: Function}]); if (e) throw e; Ajax._staticInstance._succeeded = value; }
+Ajax.get_defaultSucceededCallback = function() { 
+return Ajax._staticInstance._succeeded; }
+Ajax.set_defaultFailedCallback = function(value) { 
+var e = Function._validateParams(arguments, [{name: 'defaultFailedCallback', type: Function}]); if (e) throw e; Ajax._staticInstance._failed = value; }
+Ajax.get_defaultFailedCallback = function() { 
+return Ajax._staticInstance._failed; }
+Ajax.set_path("/Ajax.asmx");
+Ajax.GetNewPinGraphics= function(onSuccess,onFailed,userContext) {Ajax._staticInstance.GetNewPinGraphics(onSuccess,onFailed,userContext); }
+Ajax.CheckPinGraphics= function(txt,onSuccess,onFailed,userContext) {Ajax._staticInstance.CheckPinGraphics(txt,onSuccess,onFailed,userContext); }
+Ajax.GetNewPin= function(onSuccess,onFailed,userContext) {Ajax._staticInstance.GetNewPin(onSuccess,onFailed,userContext); }
+Ajax.CheckPin= function(guid,txt,onSuccess,onFailed,userContext) {Ajax._staticInstance.CheckPin(guid,txt,onSuccess,onFailed,userContext); }
+Ajax.SaveVoite= function(GuidObject,list,onSuccess,onFailed,userContext) {Ajax._staticInstance.SaveVoite(GuidObject,list,onSuccess,onFailed,userContext); }
+Ajax.SaveForum= function(GuidControl,GuidClassifier,GuidObject,name,title,text,pin1,pin2,onSuccess,onFailed,userContext) {Ajax._staticInstance.SaveForum(GuidControl,GuidClassifier,GuidObject,name,title,text,pin1,pin2,onSuccess,onFailed,userContext); }
+Ajax.GetCache= function(NameCache,GuidControl,Param1,Param2,Param3,onSuccess,onFailed,userContext) {Ajax._staticInstance.GetCache(NameCache,GuidControl,Param1,Param2,Param3,onSuccess,onFailed,userContext); }
+Ajax.Get= function(GuidControl,Param1,Param2,Param3,onSuccess,onFailed,userContext) {Ajax._staticInstance.Get(GuidControl,Param1,Param2,Param3,onSuccess,onFailed,userContext); }
+Ajax.GetExt= function(GuidControl,Param1,Param2,Param3,onSuccess,onFailed,userContext) {Ajax._staticInstance.GetExt(GuidControl,Param1,Param2,Param3,onSuccess,onFailed,userContext); }
+Ajax.GetPhotoPages= function(GuidControl,guid,Lang,onSuccess,onFailed,userContext) {Ajax._staticInstance.GetPhotoPages(GuidControl,guid,Lang,onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+Type.registerNamespace('WJG');
+if (typeof(WJG.PinManagerQuery) === 'undefined') {
+WJG.PinManagerQuery=gtc("WJG.PinManagerQuery");
+WJG.PinManagerQuery.registerClass('WJG.PinManagerQuery');
+}

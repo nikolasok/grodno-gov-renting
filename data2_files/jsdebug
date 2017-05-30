@@ -1,0 +1,68 @@
+var WS_Message=function() {
+WS_Message.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+WS_Message.prototype={
+Find:function(name,succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'Find',false,{name:name},succeededCallback,failedCallback,userContext); },
+SearchQuery:function(prefixText,count,succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'SearchQuery',false,{prefixText:prefixText,count:count},succeededCallback,failedCallback,userContext); },
+SearchQueryLocal:function(prefixText,count,succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'SearchQueryLocal',false,{prefixText:prefixText,count:count},succeededCallback,failedCallback,userContext); },
+FindNew:function(prefixText,count,succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'FindNew',false,{prefixText:prefixText,count:count},succeededCallback,failedCallback,userContext); },
+Send:function(address,title,text,attachment_list,succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'Send',false,{address:address,title:title,text:text,attachment_list:attachment_list},succeededCallback,failedCallback,userContext); },
+SendBlock:function(address,group,title,text,attachment_list,succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'SendBlock',false,{address:address,group:group,title:title,text:text,attachment_list:attachment_list},succeededCallback,failedCallback,userContext); },
+Del:function(guid_messages,succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'Del',false,{guid_messages:guid_messages},succeededCallback,failedCallback,userContext); },
+ToArchive:function(guid_messages,succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'ToArchive',false,{guid_messages:guid_messages},succeededCallback,failedCallback,userContext); },
+List:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'List',false,{},succeededCallback,failedCallback,userContext); },
+ReadMessage:function(guid_message,succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'ReadMessage',false,{guid_message:guid_message},succeededCallback,failedCallback,userContext); },
+CountNotReadMessage:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(WS_Message.get_path(), 'CountNotReadMessage',false,{},succeededCallback,failedCallback,userContext); }}
+WS_Message.registerClass('WS_Message',Sys.Net.WebServiceProxy);
+WS_Message._staticInstance = new WS_Message();
+WS_Message.set_path = function(value) { 
+var e = Function._validateParams(arguments, [{name: 'path', type: String}]); if (e) throw e; WS_Message._staticInstance._path = value; }
+WS_Message.get_path = function() { return WS_Message._staticInstance._path; }
+WS_Message.set_timeout = function(value) { var e = Function._validateParams(arguments, [{name: 'timeout', type: Number}]); if (e) throw e; if (value < 0) { throw Error.argumentOutOfRange('value', value, Sys.Res.invalidTimeout); }
+WS_Message._staticInstance._timeout = value; }
+WS_Message.get_timeout = function() { 
+return WS_Message._staticInstance._timeout; }
+WS_Message.set_defaultUserContext = function(value) { 
+WS_Message._staticInstance._userContext = value; }
+WS_Message.get_defaultUserContext = function() { 
+return WS_Message._staticInstance._userContext; }
+WS_Message.set_defaultSucceededCallback = function(value) { 
+var e = Function._validateParams(arguments, [{name: 'defaultSucceededCallback', type: Function}]); if (e) throw e; WS_Message._staticInstance._succeeded = value; }
+WS_Message.get_defaultSucceededCallback = function() { 
+return WS_Message._staticInstance._succeeded; }
+WS_Message.set_defaultFailedCallback = function(value) { 
+var e = Function._validateParams(arguments, [{name: 'defaultFailedCallback', type: Function}]); if (e) throw e; WS_Message._staticInstance._failed = value; }
+WS_Message.get_defaultFailedCallback = function() { 
+return WS_Message._staticInstance._failed; }
+WS_Message.set_path("/Personal/WS_Message.asmx");
+WS_Message.Find= function(name,onSuccess,onFailed,userContext) {WS_Message._staticInstance.Find(name,onSuccess,onFailed,userContext); }
+WS_Message.SearchQuery= function(prefixText,count,onSuccess,onFailed,userContext) {WS_Message._staticInstance.SearchQuery(prefixText,count,onSuccess,onFailed,userContext); }
+WS_Message.SearchQueryLocal= function(prefixText,count,onSuccess,onFailed,userContext) {WS_Message._staticInstance.SearchQueryLocal(prefixText,count,onSuccess,onFailed,userContext); }
+WS_Message.FindNew= function(prefixText,count,onSuccess,onFailed,userContext) {WS_Message._staticInstance.FindNew(prefixText,count,onSuccess,onFailed,userContext); }
+WS_Message.Send= function(address,title,text,attachment_list,onSuccess,onFailed,userContext) {WS_Message._staticInstance.Send(address,title,text,attachment_list,onSuccess,onFailed,userContext); }
+WS_Message.SendBlock= function(address,group,title,text,attachment_list,onSuccess,onFailed,userContext) {WS_Message._staticInstance.SendBlock(address,group,title,text,attachment_list,onSuccess,onFailed,userContext); }
+WS_Message.Del= function(guid_messages,onSuccess,onFailed,userContext) {WS_Message._staticInstance.Del(guid_messages,onSuccess,onFailed,userContext); }
+WS_Message.ToArchive= function(guid_messages,onSuccess,onFailed,userContext) {WS_Message._staticInstance.ToArchive(guid_messages,onSuccess,onFailed,userContext); }
+WS_Message.List= function(onSuccess,onFailed,userContext) {WS_Message._staticInstance.List(onSuccess,onFailed,userContext); }
+WS_Message.ReadMessage= function(guid_message,onSuccess,onFailed,userContext) {WS_Message._staticInstance.ReadMessage(guid_message,onSuccess,onFailed,userContext); }
+WS_Message.CountNotReadMessage= function(onSuccess,onFailed,userContext) {WS_Message._staticInstance.CountNotReadMessage(onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+if (typeof(WS_Message_AnMessage) === 'undefined') {
+var WS_Message_AnMessage=gtc("WS_Message+AnMessage");
+WS_Message_AnMessage.registerClass('WS_Message_AnMessage');
+}

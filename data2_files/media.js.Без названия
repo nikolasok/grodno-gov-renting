@@ -1,0 +1,36 @@
+﻿
+var so=null;
+var video_sel=null;
+
+
+attachEvent('onload', SV_start);
+
+function SV_start() {
+   if(video_sel!=null) document.getElementById('v'+video_sel).click();
+}
+
+
+function SV(gg,name,width,height, file2,file2text) {
+    if(video_sel==gg) return;
+
+	if(video_sel!=null){
+        if(confirm(messageGO)==false) return;
+		document.getElementById('video'+video_sel).innerHTML='';
+        document.getElementById('video_dop'+video_sel).innerHTML='';
+	}
+	video_sel=gg;
+	
+	document.getElementById('video'+gg).innerHTML='<div style="border: 1px solid black; margin: 4px; padding: 4px;"><b>Если вы видите этот текст - значит Ваш браузер не поддерживает плагин JW Player Flash Video Player.</b><br/>Перейдите на страницу <a href="http://get.adobe.com/flashplayer/" target="_blank">Adobe Flash Player</a> для загрузки плагина.</a>';
+	so=null;
+	so = new SWFObject('/player.swf','mmm1',width,height,'9');
+	so.addParam('allowfullscreen','true');
+	so.addParam('allowscriptaccess','always');
+	so.addParam('bgcolor','#FFFFFF');
+	so.addParam('flashvars','file='+name+'&autostart=true');
+	so.write('video'+gg);
+
+    if(file2!='' && file2text!=''){
+        document.getElementById('video_dop'+gg).innerHTML='<a href='+file2+'>'+file2text+'</a>';
+    }
+}
+

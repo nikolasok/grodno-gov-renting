@@ -1,0 +1,25 @@
+﻿var sel_foto=null;
+
+function foto(obj,guid) {
+	document.getElementById('fotoLink').href='/sm.aspx?guid='+guid;
+	document.getElementById('fotoRes').src='/sm.aspx?guid='+guid;
+	document.getElementById('fotoInfo').innerHTML=obj.alt;
+	obj.style.borderColor='blue';
+	if(sel_foto!=null) sel_foto.style.borderColor='white';
+	sel_foto=obj;
+}
+
+function GA(obj, name){
+    return ;
+}
+
+
+function LoadImg(){
+   var db=event.srcElement.id;
+   var next=db.substr(0,db.indexOf('_')+1)+(eval(db.substr(db.indexOf('_')+1))+1);
+   var obj=document.getElementById(next);
+   //alert(db+'--'+next);
+   if(obj==null) {return;}
+   obj.attachEvent('onload',LoadImg);
+   obj.src=obj.attributes.getNamedItem('path').value;
+}
